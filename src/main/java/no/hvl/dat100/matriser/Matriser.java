@@ -21,30 +21,19 @@ public class Matriser {
             return "null";
         }
 
-        public class tilStreng {
-            public static String tilStreng(int[][] matrise) {
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < matrise.length; i++) {
-                    for (int j = 0; j < matrise[i].length; j++) {
-                        sb.append(matrise[i][j]);
-                        if (j < matrise[i].length - 1) sb.append(" ");
-                    }
-                    sb.append("\n");
+        public static String tilStreng(int[][] matrise) {
+            if (matrise == null) {
+                return "null";
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < matrise.length; i++) {
+                for (int j = 0; j < matrise[i].length; j++) {
+                    sb.append(matrise[i][j]);
+                    if (j < matrise[i].length - 1) sb.append(" ");
                 }
-                return sb.toString();
+                sb.append("\n");
             }
-            }
-
-            public static void main(String[] args) {
-                int[][] matrise = {
-                        {1, 2, 3},
-                        {4, 5, 6},
-                        {7, 8, 9}
-                };
-
-                String strengRepresentasjon = tilStreng(matrise);
-                System.out.println(strengRepresentasjon);
-            }
+            return sb.toString();
         }
 
     }

@@ -1,4 +1,5 @@
 package no.hvl.dat100.tabeller;
+import java.util.Arrays;
 
 public static void skrivUt(int[] tabell) {
     for (int tall : tabell) {
