@@ -25,7 +25,9 @@ public class Matriser {
                     sb.append(" ");
                 }
             }
-            sb.append("\n");
+            if (i < matrise.length - 1) {
+                sb.append("\n");
+            }
         }
         return sb.toString();
     }
