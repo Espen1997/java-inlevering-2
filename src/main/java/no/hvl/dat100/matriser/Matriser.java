@@ -21,13 +21,9 @@ public class Matriser {
         for (int i = 0; i < matrise.length; i++) {
             for (int j = 0; j < matrise[i].length; j++) {
                 sb.append(matrise[i][j]);
-                if (j < matrise[i].length - 1) {
-                    sb.append(" ");
-                }
+                if (j < matrise[i].length - 1) sb.append(" ");
             }
-            if (i < matrise.length - 1) {
-                sb.append("\n");
-            }
+            if (i < matrise.length - 1) sb.append("\n");
         }
         return sb.toString();
     }
