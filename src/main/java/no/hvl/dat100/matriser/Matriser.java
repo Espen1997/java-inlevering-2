@@ -2,6 +2,7 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 
+    //a
     public static void skrivUt(int[][] matrise) {
         if (matrise == null) {
             System.out.println("Matrisen er null.");
@@ -14,30 +15,22 @@ public class Matriser {
             System.out.println();
         }
     }
-
+    //b
     public static String tilStreng(int[][] matrise) {
-        if (matrise == null) {
-            return "null";
-        }
-
-        String streng = "[";
-        for (int i = 0; i < matrise.length; i++) {
-            streng += "[";
-            for (int j = 0; j < matrise[i].length; j++) {
-                streng += matrise[i][j];
-                if (j < matrise[i].length - 1) {
-                    streng += ", ";
+            if (matrise == null) {
+                return "null";
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < matrise.length; i++) {
+                for (int j = 0; j < matrise[i].length; j++) {
+                    sb.append(matrise[i][j]);
+                    if (j < matrise[i].length - 1) sb.append(" ");
                 }
+                sb.append("\n");
             }
-            streng += "]";
-            if (i < matrise.length - 1) {
-                streng += ", ";
-            }
+            return sb.toString();
         }
-        streng += "]";
-        return streng;
-    }
-
+    //c
     public static int[][] skaler(int tall, int[][] matrise) {
         if (matrise == null) return null;
         int rader = matrise.length, kolonner = matrise[0].length;
@@ -49,7 +42,7 @@ public class Matriser {
         }
         return resultat;
     }
-
+    //d
     public static boolean erLik(int[][] a, int[][] b) {
         if (a == b) return true;
         if (a == null || b == null || a.length != b.length) return false;
@@ -61,7 +54,7 @@ public class Matriser {
         }
         return true;
     }
-
+    //oppgave 6a
     public static int[][] speile(int[][] matrise) {
         if (matrise == null) return null;
         int rader = matrise.length, kolonner = matrise[0].length;
@@ -73,7 +66,7 @@ public class Matriser {
         }
         return resultat;
     }
-
+    //oppgave 6b
     public static int[][] multipliser(int[][] a, int[][] b) {
         if (a == null || b == null) return null;
         int raderA = a.length, kolonnerA = a[0].length, raderB = b.length, kolonnerB = b[0].length;
