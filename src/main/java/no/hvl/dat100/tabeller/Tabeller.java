@@ -40,12 +40,12 @@ public class Tabeller {
         return false;
     }
 
-    public static void reverser(int[] tabell) {
-        for (int i = 0; i < tabell.length / 2; i++) {
-            int temp = tabell[i];
-            tabell[i] = tabell[tabell.length - 1 - i];
-            tabell[tabell.length - 1 - i] = temp;
+    public static int[] reverser(int[] tabell) {
+        int[] reversed = new int[tabell.length];
+        for (int i = 0; i < tabell.length; i++) {
+            reversed[i] = tabell[tabell.length - 1 - i];
         }
+        return reversed;
     }
 
     public static boolean erSortert(int[] tabell) {
