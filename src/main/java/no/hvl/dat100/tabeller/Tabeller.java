@@ -82,4 +82,3 @@ public class Tabeller {
         }
         return resultat;
     }
-}
