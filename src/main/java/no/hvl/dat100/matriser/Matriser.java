@@ -17,11 +17,6 @@ public class Matriser {
     }
     //b
     public static String tilStreng(int[][] matrise) {
-        if (matrise == null) {
-            return "null";
-        }
-
-        public static String tilStreng(int[][] matrise) {
             if (matrise == null) {
                 return "null";
             }
@@ -35,8 +30,6 @@ public class Matriser {
             }
             return sb.toString();
         }
-
-    }
     //c
     public static int[][] skaler(int tall, int[][] matrise) {
         if (matrise == null) return null;
